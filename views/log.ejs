@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign in and Sign up</title>
+        <link rel="stylesheet" href="css/styles2.css">
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="forms-container">
+                <div class="login-signUp">
+                    <form action="/login" method="POST" class="sign-in-form">
+                        <h2 class="title">Sign in</h2>
+                        <div class="input-field">
+                            <i class="fa fa-user"></i>
+                            <input type="email" name="username" required placeholder="Email"/>
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" name="password" required placeholder="Password"/>
+                        </div>
+                        <a href="/forgetpassword"><p class="social-text">Forget Password?</p></a>
+                        <input type="submit" class="btn solid" value="Login" />
+                        <p class="social-text">Sign in with google</p>
+                        <div class="social-media">
+                            <a href="/auth/google" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </form>
+
+                    <form action="/getdetails" method="POSt" class="sign-up-form">
+                        <h2 class="title">Sign Up</h2>
+                        <div class="input-field">
+                            <i class="fa fa-user"></i>
+                            <input type="text" name= "fullname" required placeholder="Fullname"/>
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-envelope"></i>
+                            <input type="email" name="username" required placeholder="Email"/>
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" name= "password" required placeholder="Password" minlength="8"/>
+                        </div>
+                        <input type="submit" class="btn solid" value="Sign up" />
+                        <p class="social-text">Sign Up with google</p>
+                        <div class="social-media">
+                            <a href="/auth/google" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panel-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>New Here ?</h3>
+                        <br>
+                        <!-- <br> -->
+<!--
+                        <p>
+                            Text here
+                        </p>
+                       -->
+                        <button class="btn transparent" id="sign-up-button">Sign Up</button>
+                    </div>
+                    <img src="images/login.svg" class="image" alt=""/>
+                </div>
+
+                <div class="panel right-panel">
+                    <div class="content">
+                        <h3>One of us ?</h3>
+                        <br>
+<!--
+                        <p>
+                            Text here
+                        </p>
+                         -->
+                        <button class="btn transparent" id="sign-in-button">Sign In</button>
+                    </div>
+                    <img src="images/undraw_Login_re_4vu2 (1).svg" class="image" alt=""/>
+                </div>
+            </div>
+        </div>
+        
+        <script src="app1.js"></script>
+    </body>
+</html>

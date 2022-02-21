@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Profile Page</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/profilepage.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body style="background-color:#FEFBF3">
+
+  <nav class="navbar navbar-expand-lg   navigationbar" style="background-color: #37517e;">
+    <div class="collapse navbar-collapse">
+
+      <span class="navbar-brand mb-0 h2 head" style="color:#fff">Xperience</span>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" style="color:#fff" href="/login">Back to login <span class="sr-only">(current)</span></a>
+        </li>
+        
+      </ul>
+    </div>
+
+  </nav>
+  <div class="profile-info col-md-9">
+  <div class="panel">
+    <form action="/forget/otpverify" method="POST">
+        <input type = "text"  requiredclass="form-control input-lg p-text-area" placeholder="Enter 4-digit pin" size="109" name="otp" style="margin-bottom:5px"></input>
+    <footer class="panel-footer">
+        <button type="submit" class="btn btn-primary share-button" style="background-color: #37517e">Verify the code</button>
+    </footer>
+  </form>
+  <footer class="panel-footer">
+    <a href="/otpverify"><button class="btn btn-primary share-button" style="background-color: #37517e">Resend pin</button></a>
+</footer>
+</div>
+</div>
+
+
+
+</body>
+</html>

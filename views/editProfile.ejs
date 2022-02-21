@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Alumni profile information</title>
+    <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/userinfo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+
+
+<body style="background-color: #37517e ">
+
+  <nav class="navbar navbar-expand-lg   navigationbar" style="background-color: black;">
+    <div class="collapse navbar-collapse">
+
+      <span class="navbar-brand mb-0 h2 head" style="color:#fff">Xperience</span>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" style="color:#fff" href="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" style="color:#fff" href="/profile">Profile</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto" action="/logout">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
+      </form>
+    </div>
+
+  </nav>
+
+  <div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+      <!-- user profile pic and links -->
+      <div class="col-md-3 border-right">
+        <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="text-right">Upload Profile picture</h6>
+          </div>
+          <img class="profilepic" src=<%=  file != 'undefined' ? file : "images/profilepic.png" %>>
+          <!-- <%= typeof msg != 'undefined' ? msg : '' %> -->
+          <form  class="uploading" action="/uploadProfilePicture" method="POST" enctype="multipart/form-data" id="form1">
+            <input type="file" name="image"  id="fileToUpload">
+            <input class="uploadimage" type="submit" value="Upload Image" name="submit">
+          </form>
+        </div>
+      </div>
+      <!-- user details -->
+      
+      <div class="col-md-5 border-right">
+        <form action="/editProfile" method = "POST" id="form2" >
+        <div class="p-3 py-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="text-center">Edit your profile</h6>
+          </div>
+          <div class="row mt-2">
+    
+            <div class="col-md-6"><label class="labels">Name</label><input type="text" value= '<%= fname%>' name="fname" class="form-control" placeholder="first name"></div>
+            <div class="col-md-6"><label class="labels">Surname</label><input type="text" value='<%= sname%>' name="sname" class="form-control" placeholder="last name"></div>
+          
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12"><label class="labels">Company</label><input type="text" value='<%= company%>' name="company" class="form-control" placeholder="Current Company"></div>
+            <div class="col-md-12"><label class="labels">Position</label><input type="text" value='<%= position %>' name="position" class="form-control" placeholder="Current position"></div>
+
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6"><label class="labels">Branch</label><input type="text" value='<%= branch %>' name="branch" class="form-control" placeholder="branch at IIITL"></div>
+            <div class="col-md-6"><label class="labels">Graduation</label><input type="text" value='<%= graduation%>' name="graduation"class="form-control" placeholder="graduation year"></div>
+          </div>
+          <div class="row mt-3">
+
+            <div class="col-md-12"> <label class="labels">About Me</label><textarea class="form-control" value='<%=aboutme%>' name="aboutme" rows="3" cols="50"> <%=aboutme %> </textarea></div>
+          </div>
+          <div class="mt-5 text-center"><button type="submit"  class="btn btn-primary profile-button" style="background-color: #37517e" type="button">Save Profile</button></div>
+        </div>
+      <!-- </form > -->
+      </div>
+    
+
+      <!-- profile links -->
+      <div class="col-md-3">
+        <!-- <form action="/register" method = "POST" > -->
+        <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="text-right">Update your profile links</h6>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-3 p-2">
+              <img src="images/linkedin.jpg"" style=" width:30px">
+            </div>
+            <div class="col-md-9 p-2">
+              <input class="form-control" name="lnProfile" value='<%=lnProfile%>' type="text" placeholder="www.linkedin.com">
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-3 p-2">
+              <img src="images/github.jpg"  style=" width:30px">
+            </div>
+            <div class="col-md-9 p-2">
+              <input class="form-control"  name="ghProfile" value='<%=ghProfile%>' type="text" placeholder="www.github.com">
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-3 p-2">
+              <img src="images/gfg.jpg" style="width:30px">
+            </div>
+            <div class="col-md-9 p-2">
+              <input class="form-control"  name="gfgProfile" value='<%=gfgProfile%>' type="text" placeholder="www.geeksforgeeks.com">
+            </div>
+          </div>
+          <!-- <div class="col-md-3 p-2">
+           <div class="row mt-2">
+             <img src="images/codechef.jpg"" style=" width:30px">
+            </div>
+            <div class="col-md-9 p-2">
+              <input class="form-control" type="text" placeholder="www.codechef.com">
+            </div>
+          </div> -->
+          <div class="row mt-2">
+            <div class="col-md-3 p-2">
+              <img src="images/codeforces.jpg" style="width:30px">
+            </div>
+            <div class="col-md-9 p-2">
+              <input class="form-control"  name="cfProfile" value='<%=cfProfile%>' type="text" placeholder="www.codeforces.com">
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-3 p-2">
+              <img src="images/leetcode.jpg" style="width:30px">
+            </div>
+            <div class="col-md-9 p-2">
+              <input class="form-control"  name="lcProfile" value='<%=lcProfile%>' type="text" placeholder="www.leetcode.com">
+            </div>
+          </div>
+
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="multer.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Profile Page</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"  />
+  <!-- <link rel="stylesheet" type="text/css" href="/public/css/profilevisit.css"> -->
+  <link href="/css/profilevisit.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"  >
+</head>
+
+<body style="background-color:#FEFBF3">
+
+  <!-- navigation bar -->
+  <nav class="navbar navbar-expand-lg   navigationbar" style="background-color: #37517e;">
+    <div class="collapse navbar-collapse">
+
+      <span class="navbar-brand mb-0 h2 head" style="color:#fff">Xperience</span>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" style="color:#fff" href="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+    
+        <li class="nav-item">
+          <a class="nav-link" style="color:#fff" href="/profile">Profile</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto" action="/logout">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
+      </form>
+    </div>
+
+  </nav>
+
+
+<div class="container bootstrap snippets bootdey">
+  <div class="row">
+
+<!-- profile section -->
+<div class="profile-nav col-md-3">
+    <div class="panel">
+      <div class="user-heading">
+        <img class="profilepic" src=<%= file != 'undefined' ? file : "images/profilepic.png" %>>
+                   <h1 class="nameheading"><%= userFullname %></h1>
+                   <p class="emailadd"><%= userEmail%></p>
+               </div>
+
+
+               <ul class="list-group">
+                            <li class="list-group-item"><a href="yourPosts.html"> <i class="fas fa-rss-square" style="padding-right:5px"></i>Your Posts</a></li>
+           
+                        </ul>
+</div>
+</div>
+<!-- posting exo -->
+  <div class="profile-info col-md-9">
+    <!-- <div class="panel">
+        <form>
+            <input type = "text" placeholder="  Company Name" size="109" style="margin-bottom:5px"></input>
+            <textarea placeholder="Share your experience here..." rows="5" class="form-control input-lg p-text-area"></textarea>
+        </form>
+        <footer class="panel-footer">
+            <button class="btn btn-primary share-button" style="background-color: #37517e">Share</button>
+        </footer>
+    </div> -->
+<!-- user info -->
+<div class="panel">
+    <div class="bio-graph-heading">
+
+      <p><%= aboutme %></p>
+    </div>
+    <div class="panel-body bio-graph-info">
+        <h1 class="headbio">Bio Graph</h1>
+        <div class="row">
+            <div class="bio-row">
+                <p> <i class="fas fa-user"  style="padding-right:5px; padding-left:5px"></i>Name: <%= userFullname%></p>
+            </div>
+            <div class="bio-row">
+                <p><span><i class="fas fa-user-graduate" style="padding-right:5px; padding-left:5px"></i> graduation</span>: <%= graduation %></p>
+            </div>
+            <div class="bio-row">
+                <p><span><i class="fas fa-user-tie" style="padding-right:5px; padding-left:5px"></i>Current Company</span>: <%= company %></p>
+            </div>
+            <div class="bio-row">
+                <p><span><i class="fas fa-file-code" style="padding-right:5px; padding-left:5px"></i>Position</span>: <%= position %></p>
+            </div>
+            <div class="bio-row">
+                <p><span><i class="fas fa-laptop" style="padding-right:5px; padding-left:5px"></i>Branch</span>: <%= branch %></p>
+            </div>
+        </div>
+
+        <h1 class="headbio">Profile links</h1>
+        <div class="row">
+            <div class="bio-row">
+               
+                 <a href='<%=cfProfile%>' > <img class="linksimg" src="/images/codeforces.jpg" alt=""></a>
+            </div>
+            <div class="bio-row">
+                
+               <a href=<%=gfgProfile %>><img class="linksimg" src="/images/gfg.jpg" alt=""></a>
+            </div>
+            <div class="bio-row">
+                
+               <a href=<%=lnProfile%>><img class="linksimg" src="/images/linkedin.jpg" alt=""></a>
+            </div>
+            <div class="bio-row">
+                
+               <a href=<%=lcProfile%>><img class="linksimg" src="/images/leetcode.jpg" alt=""></a>
+            </div>
+              <div class="bio-row">
+                
+               <a href=<%=ghProfile%>><img class="linksimg" src="/images/github.jpg" alt=""></a>
+              </div>
+        </div>
+    </div>
+
+</div>
+<div class="article"><h3>User Articles</h3></div>
+<%articles.forEach(function(article){%>
+  <div class="panel">
+    <div class="card" style="margin-top:10px;">
+      <!--
+  <div class="card-block">
+    <div>  <img class="profilepic" src="images/leetcode.jpg" alt=""><strong class="namehead">Anupam Jha</strong></div>
+    </div>
+     -->
+      <div class="row ">
+        <div class="col-1">
+          <img class="profilepics" src=<%= article.imageURL != 'undefined' ? article.imageURL : "images/profilepic.png" %>>
+        </div>
+        <div class="col-8 namehead">
+          <div><strong><%= article.fullname %></strong></div>
+          <div class="intro"><i class="fas fa-user-graduate"></i> <%= article.graduation %></div>
+        </div>
+      </div>
+      <hr>
+      <div class="card-block">
+        <div class="timeline-details">
+          <div><%=article.company%></div>
+          <p >
+            <%=article.content%>
+          </p>
+        </div>
+      </div>
+      <hr>
+      <!-- <div class="card-block social-msg">
+        <i class="fas fa-thumbs-up" style="padding-right:5px;"></i><span>Likes (20)</span>
+      </div> -->
+  
+    </div>
+  </div>
+  <% });%>
+
+    </div>
+    </div>
+</div>
+</body>
+</html>
