@@ -1,0 +1,145 @@
+body{
+    /* background: #f1f2f7; */
+    background: black; 
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 ;
+    margin: 0;
+    font-size: 13px;
+   }
+   .dp{
+       box-shadow: 0 2px 15px ;
+   }
+   
+   .profile-nav, .profile-info{
+       margin-top:30px;
+   }
+   
+   .profile-nav .user-heading {
+       background: #37517e;
+       color: #fff;
+       border-radius: 4px 4px 0 0;
+       padding: 30px;
+       text-align: center;
+   }
+   
+   .profilepic{
+       width: 112px;
+       height: 112px;
+       border-radius: 50%;
+   }
+   .nameheading {
+     font-family: "Jost", sans-serif;
+       font-size: 32px;
+       font-weight: 300;
+       margin-top: 5px;
+       margin-bottom: 5px;
+   }
+   .emailadd{
+      font-size: 15px;
+   }
+   .profile-nav ul {
+       margin-top: 1px;
+   }
+   .profile-nav ul > li {
+       border-bottom: 1px solid #ebeae6;
+       margin-top: 0;
+       line-height: 30px;
+   }
+   
+   .profile-nav ul > li > a {
+       border-radius: 0;
+       color: #89817f;
+       border-left: 5px solid #fff;
+   }
+   .profile-info .panel-footer {
+       background-color:#FEFBF3 ;
+       border-top: 1px solid #e7ebee;
+   }
+   
+   .share-button{
+     margin-top: 10px ;
+   background-color: #37517e;
+   margin-left: 760px;
+   }
+   
+   .bio-graph-heading {
+   margin-top: 10px ;
+       background: #37517e;
+       color: #fff;
+       text-align: center;
+       font-style: italic;
+       padding: 40px 110px;
+       border-radius: 4px 4px 0 0;
+       font-size: 16px;
+       font-weight: 300;
+   }
+    .bio-graph-info{
+      background-color: #fff;
+    }
+    .headbio {
+       font-size: 22px;
+       font-weight: 300;
+       margin: 10px 0 20px 5px ;
+   }
+   .bio-row {
+       float: left;
+       margin-bottom: 10px;
+       padding:0 15px;
+   }
+   
+   .bio-row p{
+       width: 350px;
+       display: inline-block;
+   }
+   .linksimg{
+     border-radius: 100% ;
+     width: 40px ;
+     margin-right: 10px ;
+   }
+   .compname{
+   border-style: solid;
+     border-color: #ebeae6;
+   }
+   .article{
+     text-align: center;
+     padding-top: 10px;
+     color:  #9D9D9D;
+   }
+   
+   /* activity */
+   
+   .profilepics{
+     width: 40px;
+     height: 40px;
+     border-radius: 100%;
+     margin-left: 40px;
+     margin-top: 20px ;
+     border-style: solid;
+     border-color: #9D9D9D ;
+   }
+   .namehead{
+     padding-top: 14px;
+   margin-left: 17px;
+   }
+   .intro{
+   padding-left: 5px ;
+     color: #9D9D9D;
+     font-size: 13px;
+   }
+   .viewprofile{
+     margin-top:18px ;
+     margin-left: 95px ;
+   }
+   .timeline-details{
+     padding-left: 18px;
+     padding-right: 5px;
+   }
+   .social-msg{
+     padding-left: 18px;
+     padding-bottom: 5px;
+   }
+   .edit{
+     padding-top: 27px;
+     padding-left: 56px ;
+   }
+   

@@ -1,0 +1,204 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #47b2e4;
+}
+
+a:hover {
+  color: #73c5eb;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Jost", sans-serif;
+}
+/* general-prop */
+/* header */
+.header{
+  margin: 0 0 0 0;
+  padding: 15px 0 ;
+}
+.logo {
+  color: #fff ;
+  font-family: 'Kaisei HarunoUmi', serif;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.log-in{
+  margin-left: 20px ;
+}
+/* navigation bar */
+.nav-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul {
+  display: flex;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  padding: 10px 0 10px 28px;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a {
+  color: #47b2e4;
+}
+.log-in{
+  padding-left: 10px ;
+}
+
+/* Intro-para */
+.section1{
+  width: 100%;
+  height: 80vh;
+  background-color: #37517e ;
+}
+.container-content{
+  padding-top: 50px;
+}
+.heading1{
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}
+.heading2{
+  color: #FFF5EB;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+.btn-start{
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #47b2e4;
+}
+/* about us */
+.about{
+  background-color: #f3f5fa;
+  padding-bottom: 20px ;
+}
+.aboutus{
+  color: #37517e ;
+  text-align: center;
+  font-family: 'Kaisei HarunoUmi', serif;
+  padding-top: 30px ;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+hr{
+  width:15% ;
+   border-top: 1px solid blue;
+  color: blue  ;
+  background-color: blue ;
+}
+/* contactus */
+.contact{
+  background-color: #37517e ;
+}
+.contactheading{
+  font-family: 'Kaisei HarunoUmi', serif;
+  color: #fff ;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding-top: 90px ;
+  padding-bottom: 10px;
+}
+.contactpara{
+  color: #fff ;
+  padding-bottom: 70px ;
+}
+.align-middle{
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  margin-top : 120px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+/* team */
+.section-bg{
+    background-color: #f3f5fa;
+}
+.team .member {
+  position: relative;
+  box-shadow: 0 2px 15px ;
+  padding: 30px;
+  border-radius: 5px;
+  background: #fff;
+}
+.team .member .pic {
+  overflow: hidden;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.team .member p {
+  margin: 10px 0 0 20px;
+}
+
+.team .member .social {
+  margin-top: 12px;
+  margin-left: 20px ;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.team .member .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  background: #eff2f8;
+}
+
+.team .member .social a i {
+  color: #37517e;
+  font-size: 16px;
+  margin: 0 2px;
+}
+.name{
+    font-family: "Jost", sans-serif;
+  margin-left: 20px ;
+}

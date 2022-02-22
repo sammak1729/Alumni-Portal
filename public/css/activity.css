@@ -1,0 +1,31 @@
+.profilepic{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-left: 40px;
+  margin-top: 20px ;
+  border-style: solid;
+  border-color: #9D9D9D ;
+}
+.namehead{
+  padding-top: 14px;
+margin-left: 0;
+}
+.intro{
+padding-left: 5px ;
+  color: #9D9D9D;
+  font-size: 13px;
+}
+.viewprofile{
+  margin-top:18px ;
+  margin-left: 95px ;
+}
+.timeline-details{
+  padding-left: 18px;
+  padding-right: 5px;
+}
+.social-msg{
+  padding-left: 18px;
+  padding-bottom: 5px;
+}
+
