@@ -28,5 +28,3 @@ Launch a Terminal or PowerShell and run the following command from `Alumni-Porta
 This will start the portal on `http://localhost:3000`.
 
 <br>
-
-## All API Documentation is available [here](https://documenter.getpostman.com/view/9429369/UVC8DmL9).
